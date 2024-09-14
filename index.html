@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Video desde Google Drive</title>
+    <title>P3</title>
     <style>
-        /* Estilo del cuerpo */
         body {
             background-color: #d7d7a8;
             font-family: Arial, sans-serif;
@@ -17,13 +16,11 @@
             margin: 0;
         }
 
-        /* Encabezado */
         h1 {
             color: #ff0a54;
             text-align: center;
         }
 
-        /* Contenedor del iframe */
         .video-container {
             display: flex;
             flex-direction: column;
@@ -44,7 +41,6 @@
             height: 533px;
         }
 
-        /* Botón para expandir el video */
         .expand-button {
             margin-top: 10px;
             padding: 10px 20px;
@@ -65,17 +61,15 @@
 
     <h1>Feliz Viernes 13!!!</h1>
 
-    <!-- Contenedor del iframe y botón de expansión -->
     <div class="video-container">
         <iframe id="video-player" src="https://drive.google.com/file/d/1XRYNhAGPPr1ZYc3Sqsty5uZpCbMBgBxd/preview" allow="autoplay"></iframe>
         <button class="expand-button" onclick="expandVideo()">Expandir Video</button>
     </div>
 
     <script>
-        // Función para expandir el iframe
         function expandVideo() {
             const video = document.getElementById('video-player');
-            video.classList.toggle('expanded');  // Alterna entre expandido y no expandido
+            video.classList.toggle('expanded');  
         }
     </script>
 
