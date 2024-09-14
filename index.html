@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Video desde Google Drive</title>
+    <style>
+        /* Estilo del cuerpo */
+        body {
+            background-color: #d7d7a8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Encabezado */
+        h1 {
+            color: #ff0a54;
+            text-align: center;
+        }
+
+        /* Contenedor del iframe */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        iframe {
+            border: 3px solid #ff0a54;
+            border-radius: 10px;
+            width: 600px;
+            height: 400px;
+            transition: width 0.5s ease, height 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe.expanded {
+            width: 800px;
+            height: 533px;
+        }
+
+        /* Botón para expandir el video */
+        .expand-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff0a54;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #d40845;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz Viernes 13!!!</h1>
+
+    <!-- Contenedor del iframe y botón de expansión -->
+    <div class="video-container">
+        <iframe id="video-player" src="https://drive.google.com/file/d/1XRYNhAGPPr1ZYc3Sqsty5uZpCbMBgBxd/preview" allow="autoplay"></iframe>
+        <button class="expand-button" onclick="expandVideo()">Expandir Video</button>
+    </div>
+
+    <script>
+        // Función para expandir el iframe
+        function expandVideo() {
+            const video = document.getElementById('video-player');
+            video.classList.toggle('expanded');  // Alterna entre expandido y no expandido
+        }
+    </script>
+
+</body>
+</html>
